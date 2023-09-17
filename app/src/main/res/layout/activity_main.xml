@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnTahmin"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:background="#0D62A6"
+        android:onClick="btnClick"
+        android:text="Tahmin Et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSoru" />
+
+    <ToggleButton
+        android:id="@+id/toggleBtnCikar"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
+        android:background="#7DD7E3"
+        android:text="ToggleButton"
+        android:textOff="ON"
+        android:textOn="OFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCikar" />
+
+    <TextView
+        android:id="@+id/txtBol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Bol"
+        app:layout_constraintEnd_toEndOf="@+id/toggleBtnBol"
+        app:layout_constraintStart_toStartOf="@+id/toggleBtnBol"
+        app:layout_constraintTop_toBottomOf="@+id/togglebtnCarp" />
+
+    <TextView
+        android:id="@+id/txtCikar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CIkar"
+        app:layout_constraintEnd_toEndOf="@+id/toggleBtnCikar"
+        app:layout_constraintStart_toStartOf="@+id/toggleBtnCikar"
+        app:layout_constraintTop_toTopOf="@+id/txtBol" />
+
+    <ToggleButton
+        android:id="@+id/toggleBtnBol"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:background="#7DD7E3"
+        android:text="ToggleButton"
+        android:textOff="ON"
+        android:textOn="OFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtBol" />
+
+    <ToggleButton
+        android:id="@+id/togglebtnCarp"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="40dp"
+        android:background="#7DD7E3"
+        android:text="ToggleButton"
+        android:textOff="ON"
+        android:textOn="OFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/togglebtntopla" />
+
+    <TextView
+        android:id="@+id/txtCarp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Carp"
+        app:layout_constraintEnd_toEndOf="@+id/togglebtnCarp"
+        app:layout_constraintStart_toStartOf="@+id/togglebtnCarp"
+        app:layout_constraintTop_toTopOf="@+id/txtTopla" />
+
+    <TextView
+        android:id="@+id/txtTopla"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="Topla"
+        app:layout_constraintEnd_toEndOf="@+id/togglebtntopla"
+        app:layout_constraintStart_toStartOf="@+id/togglebtntopla"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ToggleButton
+        android:id="@+id/togglebtntopla"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:background="#7DD7E3"
+        android:text="ToggleButton"
+        android:textOff="ON"
+        android:textOn="OFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTopla" />
+
+    <TextView
+        android:id="@+id/txtSoru"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:text="Soru:"
+        android:textColor="#1732C6"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggleBtnBol" />
+
+    <EditText
+        android:id="@+id/editTextCevap"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:hint="Tahmin degerinizi giriniz"
+        android:inputType="text"
+        android:textAlignment="center"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtSoru" />
+
+    <Button
+        android:id="@+id/btnSoru"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:background="#0D62A6"
+        android:onClick="btnClick"
+        android:text="Soru Getir"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCevap" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"
+        android:textColor="#A11818"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSoru" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
